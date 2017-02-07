@@ -1,0 +1,53 @@
+@keyframes fadeIn
+    from
+        opacity: 0
+    to
+        opacity: 1
+
+@keyframes fadeInLeft
+    from
+        opacity: 0
+        transform(translateX(-50%))
+    to
+        opacity: 1
+        transform(none)
+
+@keyframes fadeInLeftL
+    from
+        opacity: 0
+        transform(translateX(-10%))
+    to
+        opacity: 1
+        transform(none)
+
+@keyframes fadeInRight
+    from
+        opacity: 0
+        transform(translateX(50%))
+    to
+        opacity: 1
+        transform(none)
+
+@keyframes fadeInRightL
+    from
+        opacity: 0
+        transform(translateX(10%))
+    to
+        opacity: 1
+        transform(none)
+
+.fadeIn
+    animation-name: fadeIn
+    animation-timing-function: ease-in
+
+.fadeInLeft
+    animation-name: fadeInLeft
+
+.fadeInLeft-light
+    animation-name: fadeInLeftL
+
+.fadeInRight
+    animation-name: fadeInRight
+
+.fadeInRight-light
+    animation-name: fadeInRightL

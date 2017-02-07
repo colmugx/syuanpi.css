@@ -1,0 +1,29 @@
+@keyframes swim-hor-in
+    from, to
+        transform(translateX(12px) skewX(0deg))
+    25%
+        transform(translateX(-12px) skewX(20deg))
+    50%
+        transform(translateX(-12px) skewX(0deg))
+    75%
+        transform(translateX(12px) skewX(-20deg))
+
+@keyframes swim-hor
+    from
+        transform(translateX(12px) skewX(0deg))
+    20%
+        transform(translateX(-12px) skewX(20deg))
+    40%
+        transform(translateX(-12px) skewX(0deg))
+    60%
+        transform(translateX(12px) skewX(-20deg))
+    80%
+        transform(translateX(12px) skewX(20deg))
+    to
+        transform(translateX(0px) skewX(0deg))
+
+.swim-hor
+    animation-name: swim-hor
+
+.swim-hor-in
+    animation-name: swim-hor-in

@@ -1,0 +1,21 @@
+@keyframes fallIn
+    0%
+        opacity: 0
+        transform(translateY(-50%))
+    100%
+        opacity: 1
+        transform(translateY(0%))
+
+@keyframes fallInL
+    0%
+        opacity: 0
+        transform(translateY(-20%))
+    100%
+        opacity: 1
+        transform(translateY(0%))
+
+.fallIn
+    animation-name: fallIn
+
+.fallIn-light
+    animation-name: fallInL
