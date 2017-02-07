@@ -4,14 +4,14 @@
   -webkit-animation-duration: 0.57s;
   animation-timing-function: ease-in-out;
 }
-.syuanpi .infinite {
+.syuanpi.infinite {
   animation-iteration-count: infinite;
 }
-.syuanpi .long {
-  animation-duration: 2.3s;
-  -webkit-animation-duration: 2.3s;
+.syuanpi.long {
+  animation-duration: 2.33s;
+  -webkit-animation-duration: 2.33s;
 }
-.syuanpi .forwards {
+.syuanpi.forwards {
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
