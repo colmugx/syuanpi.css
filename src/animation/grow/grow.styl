@@ -1,1 +1,15 @@
-// @keyframes grow
+@keyframes grow
+    from
+        opacity: 0
+        transform: translateY(60%) rotateY(95deg)
+        animation-timing-function: cubic-bezier(0.84, 0.1, 0.82, 0.67)
+    60%
+        transform: translateY(-60%) scale(1.2, 1.2)
+        animation-timing-function: cubic-bezier(0, 1.1, 0.98, 0.99)
+    to
+        opacity: 1
+        transform: none
+
+.grow
+    animation-name: grow
+    animation-timing-function: ease-in

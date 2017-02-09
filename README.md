@@ -1,5 +1,4 @@
-# Syuanpi.css 
-[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/) 
+# Syuanpi.css [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/) 
 （暂时没有英文版本…）
 
 `Syuanpi.css`是一个比较轻便简单的CSS3动画库，据说好像应该可以跨平台。
@@ -40,6 +39,7 @@ or
   <link rel="stylesheet" href="dist/syuanpi.min.css">
 </head>
 ```
+
 2. 引用完起码要在你要的地方标记一下吧~
 ```html
 <div class="syuanpi">
@@ -47,6 +47,7 @@ or
     </div>
 </div>
 ```
+
 3. 动画是有多出两种模式的，一种是动画循环，您可以这么做：
 ```html
 <div class="syuanpi infinite">
@@ -82,6 +83,17 @@ or
     </div>
 </div>
 ```
+还不够！可能部分用户需要动画延时（比如我自己），所以！自己的需求肯定也要满足。
+所以！`Syuanpi.css` 有~~五档电风扇~~ 啊不对，五档延时。
+```html
+<div class="syuanpi back-1"></div>
+<div class="syuanpi back-2"></div>
+<div class="syuanpi back-3"></div>
+<div class="syuanpi back-4"></div>
+<div class="syuanpi back-5"></div>
+```
+[此处应该有“小车车追尾”演示]
+
 4. 挑选想要用的动画，然后添加进`class`，就像这样
 ```html
 <div class="">
@@ -101,6 +113,8 @@ or
 * `pulse`
 * `blink`
 * `bloom`
+* `carIn`
+* `carOut`
 * `dead`
 * `fadeIn`
 * `fadeInLeft`

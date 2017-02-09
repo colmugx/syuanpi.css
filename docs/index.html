@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Syuanpi.css</title>
+    <link rel="stylesheet" href="syuanpi.min.css">
+    <script src="jquery.js"></script>
+</head>
+<body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'PingFang SC', 'Helvetica Neue', 'Helvetica';
+    }
+    body {
+        -webkit-user-select:none;
+        -ms-user-select:none;
+    }
+    .background {
+        position: fixed;
+        background-color: #3bdda6;
+        width: 100%;
+        height: 480px;
+    }
+    .background:after {
+        content: '';
+        position: absolute;
+
+    }
+    .title {
+        margin: 140px auto 0;
+        text-align: center;
+        font-size: 36px;
+        color: #fcfcfc;
+    }
+
+    h1 {
+        font-weight: 200;
+        font-size: 2.5em;
+        margin: 10px 0;
+    }
+
+    h6 {
+        font-weight: 100;
+        letter-spacing: 2px;
+    }
+    .control {
+        display: block;
+        margin: 2.7em;
+        text-align: center;
+    }
+    .con-select,
+    .sub-button {
+        outline:none;
+        background-color: transparent;
+        margin: 5px;
+        border-radius: 5px;
+        color: #fcfcfc;
+        font: normal normal 300 16px "PingFang SC",'Helvetica Neue';
+    }
+    .con-select {
+        padding: 0.62rem 1.65rem;
+        -webkit-appearance: none;
+        -ms-progress-appearance: none;
+        border: 1px solid #fcfcfc;
+        width: 200px;
+    }
+    .sub-button {
+        padding: 0.93rem;
+        border: 1.1px solid #fcfcfc;
+        line-height: 0.85;
+        font-weight: 300;
+        cursor: pointer;
+    }
+    .lane {
+        position: absolute;
+        bottom: 75px;
+        left: 0;
+        width: 100%;
+        border: none;
+        border-bottom: 5px solid #a0a0a0;
+        display: none;
+    }
+    .footer {
+        text-align: center;
+        color: #fcfcfc;
+        font-weight: 300;
+        font-size: 14px;
+    }
+    .footer a {
+        color: #fcfcfc;
+        text-decoration: none;
+    }
+    .footer a:hover {
+        text-decoration: underline;
+    }
+</style>
+<div class="background">
+    <div class="title">
+        <h1 id="syuanpi" class="syuanpi riseIn-light">Syuanpi.css</h1>
+        <h6 class="syuanpi riseIn back-1 forwards" style="opacity: 0">轻松两步活跃您的站点！</h6>
+    </div>
+    <div class="control">
+        <form>
+            <select class="con-select syuanpi long carInLeft back-3 forwards" style="transform: translateX(-1000%)">
+                <optgroup label="interesting">
+                    <option value="swim">Swim</option>
+                    <option value="swim-hor">Swim-Hor</option>
+                    <option value="blink">blink</option>
+                    <option value="bloom">bloom</option>
+                    <option value="dead">dead</option>
+                    <option value="grow">grow</option>
+                </optgroup>
+                <optgroup label="fadeIn">
+                    <option value="fadeIn">fadeIn</option>
+                    <option value="fadeInLeft">fadeInLeft</option>
+                    <option value="fadeInLeft-light">fadeInLeft-light</option>
+                    <option value="fadeInRight">fadeInRight</option>
+                    <option value="fadeInRight-light">fadeInRight-light</option>
+                </optgroup>
+                <optgroup label="fadeOut">
+                    <option value="fadeOut">fadeOut</option>
+                    <option value="fadeOutLeft">fadeOutLeft</option>
+                    <option value="fadeOutRight">fadeOutRight</option>
+                </optgroup>
+                <optgroup label="carIn">
+                    <option value="carInLeft">carInLeft</option>
+                    <option value="carInRight">carInRight</option>
+                </optgroup>
+                <optgroup label="carOut">
+                    <option value="carOutLeft">carOutLeft</option>
+                    <option value="carOutRight">carOutRight</option>
+                </optgroup>
+                <optgroup label="">
+                </optgroup>
+            </select>
+            <button type="button" class="sub-button syuanpi long carInRight back-3 forwards" id="sub-button" style="transform: translateX(1000%)">Get Fun!</button>
+        </form>
+    </div>
+    <footer class="footer syuanpi riseIn back-2 forwards" style="opacity: 0">
+        <span><a href="https://github.com/ColMugX/Syuanpi.css" target="_blank">View on GitHub</a>　❤　<a href="https://github.com/ColMugX">@Co1MugX</a></span>
+    </footer>
+</div>
+<hr class="lane">
+<script>
+    let anime = function(e) {
+        console.log(e)
+        $('#syuanpi').removeClass().addClass('syuanpi long ' + e).one('webkitAnimationEnd', function () {
+            $(this).removeClass();
+        })
+    }
+    $(document).ready(function() {
+        $('#sub-button').click(function(e) {
+            console.log('click')
+            e.preventDefault();
+            var event = $('.con-select').val();
+            anime(event);
+        })
+    })
+</script>
+</body>
+</html>

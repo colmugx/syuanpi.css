@@ -1,14 +1,11 @@
 @keyframes dead
     from
         opacity: 1
-        transform(scale(1,1))
-    60%
-        opacity: 0.9
-        transform(scale(1.2,1.2))
+        transform: scale(1,1)
     to
         opacity: 0
-        transform(scale(0.8,0.8))
+        transform: scale(1.2,1.2)
 
 .dead
     animation-name: dead
-    animation-timing-function: ease-out
+    animation-timing-function: cubic-bezier(0.93, 0, 0.32, 1.17)

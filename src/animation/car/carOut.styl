@@ -1,0 +1,28 @@
+@keyframes carOutLeft
+    20%
+        transform: rotateZ(3deg)
+    40%
+        transform: translateX(-1%) rotateZ(-7deg)
+        animation-timing-function: cubic-bezier(0.18, 1.1, 0.62, 1.29)
+    90%,to
+        transform: translateX(-1500px)
+        animation-timing-function: cubic-bezier(0, 0.5, 0.99, 0.12)
+
+@keyframes carOutRight
+    20%
+        transform: rotateZ(-3deg)
+    40%
+        transform: translateX(1%) rotateZ(7deg)
+        animation-timing-function: cubic-bezier(0.18, 1.1, 0.62, 1.29)
+    90%,to
+        transform: translateX(1500px)
+        animation-timing-function: cubic-bezier(0, 0.5, 0.99, 0.12)
+
+.carOutLeft
+.carOutRight
+    animation-timing-function: ease-out
+
+.carOutLeft
+    animation-name: carOutLeft
+.carOutRight
+    animation-name: carOutRight
