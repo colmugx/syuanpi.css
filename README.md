@@ -6,22 +6,27 @@
 
 ## 安装
 
-所有东西都已经在`dist`中。您可以：
+1.所有东西都已经在`dist`中。您可以：
 * `Open in Desktop`
 * `Download ZIP`
 * 打开terminal按照下列操作。
 ```bash
 git clone https://github.com/ColMugX/Syuanpi.css.git ./Syuanpi
 ```
-
 至于`bower` and `npm` 等6一点在说了！
+
+2.或者你喜欢直接用`src`的话，编译直接
+```bash
+gulp
+```
 
 ## 使用
 
 按道理说跟`Animate.css`是差不多的。不过讲一下基础用法
 
 ### 简单用法
-1. 您至少要在`<head>`之间引用一下吧！
+
+1.您至少要在`<head>`之间引用一下吧！
 ```html
 <head>
   <link rel="stylesheet" href="syuanpi.min.css">
@@ -40,7 +45,7 @@ or
 </head>
 ```
 
-2. 引用完起码要在你要的地方标记一下吧~
+2.引用完起码要在你要的地方标记一下吧~
 ```html
 <div class="syuanpi">
     <div>
@@ -48,7 +53,7 @@ or
 </div>
 ```
 
-3. 动画是有多出两种模式的，一种是动画循环，您可以这么做：
+3.动画是有多出两种模式的，一种是动画循环，您可以这么做：
 ```html
 <div class="syuanpi infinite">
     <div class="">
@@ -94,7 +99,7 @@ or
 ```
 [此处应该有“小车车追尾”演示]
 
-4. 挑选想要用的动画，然后添加进`class`，就像这样
+4.挑选想要用的动画，然后添加进`class`，就像这样
 ```html
 <div class="">
     <div class="syuanpi pulse">
