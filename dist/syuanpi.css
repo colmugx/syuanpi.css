@@ -2,8 +2,8 @@
 .syuanpi {
   animation-duration: 0.5s;
   -webkit-animation-duration: 0.5s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
   animation-timing-function: ease-in-out;
   -ms-transform: translateZ(0);
   -webkit-transform: translateZ(0);
@@ -425,6 +425,7 @@
 }
 .swim {
   animation-name: swim;
+  animation-timing-function: cubic-bezier(0.52, 0.23, 0.57, 0.79);
 }
 .swim-in {
   animation-name: swim-in;
@@ -457,25 +458,30 @@
     -webkit-transform: translateX(0%) skewX(0deg);
     transform: translateX(0%) skewX(0deg);
   }
-  20% {
+  14% {
     -ms-transform: translateX(-5%) skewX(20deg);
     -webkit-transform: translateX(-5%) skewX(20deg);
     transform: translateX(-5%) skewX(20deg);
   }
-  40% {
+  28% {
     -ms-transform: translateX(-5%) skewX(0deg);
     -webkit-transform: translateX(-5%) skewX(0deg);
     transform: translateX(-5%) skewX(0deg);
   }
-  60% {
+  42% {
     -ms-transform: translateX(5%) skewX(-20deg);
     -webkit-transform: translateX(5%) skewX(-20deg);
     transform: translateX(5%) skewX(-20deg);
   }
-  80% {
-    -ms-transform: translateX(5%) skewX(20deg);
-    -webkit-transform: translateX(5%) skewX(20deg);
-    transform: translateX(5%) skewX(20deg);
+  57% {
+    -ms-transform: translateX(5%) skewX(0deg);
+    -webkit-transform: translateX(5%) skewX(0deg);
+    transform: translateX(5%) skewX(0deg);
+  }
+  71% {
+    -ms-transform: translateX(0%) skewX(20deg);
+    -webkit-transform: translateX(0%) skewX(20deg);
+    transform: translateX(0%) skewX(20deg);
   }
 }
 .rotateAntiClowise {

@@ -11,17 +11,20 @@
 @keyframes swim
     from,to
         transform: translateX(0%) skewX(0deg)
-    20%
+    14%
         transform: translateX(-5%) skewX(20deg)
-    40%
+    28%
         transform: translateX(-5%) skewX(0deg)
-    60%
+    42%
         transform: translateX(5%) skewX(-20deg)
-    80%
-        transform: translateX(5%) skewX(20deg)
+    57%
+        transform: translateX(5%) skewX(0deg)
+    71%
+        transform: translateX(0%) skewX(20deg)
 
 .swim
     animation-name: swim
+    animation-timing-function: cubic-bezier(0.52, 0.23, 0.57, 0.79)
 
 .swim-in
     animation-name: swim-in

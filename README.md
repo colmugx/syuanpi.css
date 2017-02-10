@@ -1,7 +1,7 @@
 # Syuanpi.css [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/) 
 （暂时没有英文版本…）
 
-`Syuanpi.css`是一个比较轻便简单的CSS3动画库，据说好像应该可以跨平台。
+`Syuanpi.css`是一个比较轻便简单的CSS3动画库，据说好像应该可以跨平台。（欢迎到DEMO页面尽情找彩蛋！）
 有循环动画和过程动画。还有一些贱贱的渐变动画。至于用在哪里，各取所需。
 
 ## 安装
@@ -97,7 +97,7 @@ or
 <div class="syuanpi back-4"></div>
 <div class="syuanpi back-5"></div>
 ```
-[此处应该有“小车车追尾”演示]
+[“小车车追尾”演示（选择carInRight然后Get Fun!）](https://colmugx.github.io/Syuanpi.css)
 
 4.挑选想要用的动画，然后添加进`class`，就像这样
 ```html
