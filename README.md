@@ -118,8 +118,10 @@ or
 * `pulse`
 * `blink`
 * `bloom`
-* `carIn`
-* `carOut`
+* `carInLeft`
+* `carInRight`
+* `carOutLeft`
+* `carOutRight`
 * `dead`
 * `fadeIn`
 * `fadeInLeft`

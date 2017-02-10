@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Syuanpi.css</title>
-    <link rel="stylesheet" href="syuanpi.min.css">
-    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="./dist/syuanpi.min.css">
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
 <style>
@@ -23,24 +23,17 @@
         width: 100%;
         height: 480px;
     }
-    .background:after {
-        content: '';
-        position: absolute;
-
-    }
     .title {
         margin: 140px auto 0;
         text-align: center;
         font-size: 36px;
         color: #fcfcfc;
     }
-
     h1 {
         font-weight: 200;
         font-size: 2.5em;
         margin: 10px 0;
     }
-
     h6 {
         font-weight: 100;
         letter-spacing: 2px;
@@ -65,6 +58,12 @@
         -ms-progress-appearance: none;
         border: 1px solid #fcfcfc;
         width: 200px;
+    }
+    .con-select:after {
+        content: '▼';
+        position: absolute;
+        right: 1.2rem;
+        color: #fcfcfc;
     }
     .sub-button {
         padding: 0.93rem;
@@ -105,8 +104,9 @@
         <form>
             <select class="con-select syuanpi long carInLeft back-3 forwards" style="transform: translateX(-1000%)">
                 <optgroup label="interesting">
+                    <option value="float">float</option>
                     <option value="swim">Swim</option>
-                    <option value="swim-hor">Swim-Hor</option>
+                    <option value="jumping">jumping</option>
                     <option value="blink">blink</option>
                     <option value="bloom">bloom</option>
                     <option value="dead">dead</option>
@@ -122,7 +122,9 @@
                 <optgroup label="fadeOut">
                     <option value="fadeOut">fadeOut</option>
                     <option value="fadeOutLeft">fadeOutLeft</option>
+                    <option value="fadeOutLeft-light">fadeOutLeft-light</option>
                     <option value="fadeOutRight">fadeOutRight</option>
+                    <option value="fadeOutRight-light">fadeOutRight-light</option>
                 </optgroup>
                 <optgroup label="carIn">
                     <option value="carInLeft">carInLeft</option>
@@ -132,7 +134,21 @@
                     <option value="carOutLeft">carOutLeft</option>
                     <option value="carOutRight">carOutRight</option>
                 </optgroup>
-                <optgroup label="">
+                <optgroup label="fallIn">
+                    <option value="fallIn">fallIn</option>
+                    <option value="fallIn-light">fallIn-light</option>
+                </optgroup>
+                <optgroup label="fallOut">
+                    <option value="fallOut">fallOut</option>
+                    <option value="fallOut-light">fallOut-light</option>
+                </optgroup>
+                <optgroup label="riseIn">
+                    <option value="riseIn">riseIn</option>
+                    <option value="riseOut">riseOut</option>
+                </optgroup>
+                <optgroup label="rotate2d">
+                    <option value="rotateAntiClowise">rotateAntiClowise</option>
+                    <option value="rotateClowise">rotateClowise</option>
                 </optgroup>
             </select>
             <button type="button" class="sub-button syuanpi long carInRight back-3 forwards" id="sub-button" style="transform: translateX(1000%)">Get Fun!</button>
@@ -145,15 +161,16 @@
 <hr class="lane">
 <script>
     let anime = function(e) {
-        console.log(e)
         $('#syuanpi').removeClass().addClass('syuanpi long ' + e).one('webkitAnimationEnd', function () {
             $(this).removeClass();
         })
     }
     $(document).ready(function() {
-        $('#sub-button').click(function(e) {
-            console.log('click')
-            e.preventDefault();
+        $('#sub-button').click(function() {
+            var event = $('.con-select').val();
+            anime(event);
+        })
+        $('.con-select').change(function() {
             var event = $('.con-select').val();
             anime(event);
         })

@@ -1,8 +1,27 @@
-@keyframes swim
+@keyframes swim-in
     from, to
-        transform: translateY(8%)
+        transform: translateX(5%) skewX(0deg)
+    25%
+        transform: translateX(-5%) skewX(20deg)
     50%
-        transform: translateY(-8%)
+        transform: translateX(-5%) skewX(0deg)
+    75%
+        transform: translateX(5%) skewX(-20deg)
+
+@keyframes swim
+    from,to
+        transform: translateX(0%) skewX(0deg)
+    20%
+        transform: translateX(-5%) skewX(20deg)
+    40%
+        transform: translateX(-5%) skewX(0deg)
+    60%
+        transform: translateX(5%) skewX(-20deg)
+    80%
+        transform: translateX(5%) skewX(20deg)
 
 .swim
     animation-name: swim
+
+.swim-in
+    animation-name: swim-in
