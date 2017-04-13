@@ -1,27 +1,27 @@
 @charset "UTF-8";
-@import "./func"
 
 $time = 0.5s
+$back = 0.35s
 
 .syuanpi
     animation-duration: $time
-    animation-fill-mode: backwards
+    animation-fill-mode: both
     animation-timing-function: ease-in-out
     transform: translateZ(0)
     &.infinite
         animation-iteration-count: infinite
     &.long
-        animation-duration:2.33s
+        animation-duration: 2.33s
     &.back-1
-        animation-delay: $time
+        animation-delay: $back
     &.back-2
-        animation-delay: $time*2
+        animation-delay: $back*2
     &.back-3
-        animation-delay: $time*3
+        animation-delay: $back*3
     &.back-4
-        animation-delay: $time*4
+        animation-delay: $back*4
     &.back-5
-        animation-delay: $time*5
+        animation-delay: $back*5
     &.forwards
         animation-fill-mode: forwards
 
@@ -54,3 +54,6 @@ $time = 0.5s
 //car
 @import "animation/car/carIn"
 @import "animation/car/carOut"
+//tviN
+@import "animation/television/tvIn.styl"
+@import "animation/television/tvOut.styl"

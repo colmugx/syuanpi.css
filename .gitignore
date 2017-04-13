@@ -3,3 +3,4 @@ node_modules/
 test/
 /node_modules/
 .vscode
+/src/func.styl
