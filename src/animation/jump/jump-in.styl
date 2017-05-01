@@ -1,0 +1,17 @@
+@keyframes jump-in
+    from
+        opacity: 0
+        transform: translateY(25px) scale(1,1)
+    40%
+        opacity: 1
+        transform: translateY(-32%) scale(1,1)
+    60%
+        transform: translateY(-32%) scale(1.16,0.65)
+    80%
+        transform: translateY(-25%) scale(1,1)
+    to
+        transform: translateY(0%) scale(1,1)
+
+.jump-in
+    animation-name: jump-in
+    animation-timing-function: cubic-bezier(0.39, 0.53, 0.65, 0.51)

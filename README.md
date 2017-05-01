@@ -1,8 +1,10 @@
 # Syuanpi.css [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/) 
 （暂时没有英文版本…）
 
-`Syuanpi.css`是一个比较轻便简单的CSS3动画库，据说好像应该可以跨平台。（欢迎到DEMO页面尽情找彩蛋！）
+`Syuanpi.css`是一个比较轻便简单的CSS3动画库，据说好像应该可以跨平台。~~（欢迎到DEMO页面尽情找彩蛋！）~~
 有循环动画和过程动画。还有一些贱贱的渐变动画。至于用在哪里，各取所需。
+
+首页demo演示几处特殊效果：开放，凋落，成长，车右入，车左出，升起，降落
 
 ## 安装
 
@@ -138,10 +140,14 @@ or
 * `rotateAntiClowise`
 * `rotateClowise`
 * `swim`
-* `swim-hor` (水平游动)
+* `float`
+* `jump-in`
+* `jump-out`
 
 只能无限循环的有（其他基本都能愉快循环）
-* `swim-hor-in` (贱贱的循环版本)
+* `swim-in`
+* `float-in`
+* `jumping-in`
 
 另外
 

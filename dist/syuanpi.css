@@ -825,6 +825,18 @@
   -webkit-animation-timing-function: cubic-bezier(0.24, 0.4, 0.73, 0.55);
           animation-timing-function: cubic-bezier(0.24, 0.4, 0.73, 0.55);
 }
+.jumping-in-down {
+  -webkit-animation-name: jumping-in-down;
+          animation-name: jumping-in-down;
+  -webkit-animation-timing-function: cubic-bezier(0.39, 0.53, 0.65, 0.51);
+          animation-timing-function: cubic-bezier(0.39, 0.53, 0.65, 0.51);
+}
+.jumping-in-up {
+  -webkit-animation-name: jumping-in-up;
+          animation-name: jumping-in-up;
+  -webkit-animation-timing-function: cubic-bezier(0.39, 0.53, 0.65, 0.51);
+          animation-timing-function: cubic-bezier(0.39, 0.53, 0.65, 0.51);
+}
 @-webkit-keyframes jumping {
   from, to {
     -webkit-transform: translateY(0px) scale(1, 1);
@@ -867,6 +879,188 @@
   80% {
     -webkit-transform: translateY(22%) scale(1.1, 0.7);
             transform: translateY(22%) scale(1.1, 0.7);
+  }
+}
+@-webkit-keyframes jumping-in-down {
+  from, 90%, to {
+    -webkit-transform: translateY(0px) scale(1, 1);
+            transform: translateY(0px) scale(1, 1);
+  }
+  40% {
+    -webkit-transform: translateY(25%) scale(1, 1);
+            transform: translateY(25%) scale(1, 1);
+  }
+  55% {
+    -webkit-transform: translateY(32%) scale(1.1, 0.6);
+            transform: translateY(32%) scale(1.1, 0.6);
+  }
+  60% {
+    -webkit-transform: translateY(25%) scale(1, 1);
+            transform: translateY(25%) scale(1, 1);
+  }
+}
+@keyframes jumping-in-down {
+  from, 90%, to {
+    -webkit-transform: translateY(0px) scale(1, 1);
+            transform: translateY(0px) scale(1, 1);
+  }
+  40% {
+    -webkit-transform: translateY(25%) scale(1, 1);
+            transform: translateY(25%) scale(1, 1);
+  }
+  55% {
+    -webkit-transform: translateY(32%) scale(1.1, 0.6);
+            transform: translateY(32%) scale(1.1, 0.6);
+  }
+  60% {
+    -webkit-transform: translateY(25%) scale(1, 1);
+            transform: translateY(25%) scale(1, 1);
+  }
+}
+@-webkit-keyframes jumping-in-up {
+  from, 90%, to {
+    -webkit-transform: translateY(0px) scale(1, 1);
+            transform: translateY(0px) scale(1, 1);
+  }
+  40% {
+    -webkit-transform: translateY(-25%) scale(1, 1);
+            transform: translateY(-25%) scale(1, 1);
+  }
+  55% {
+    -webkit-transform: translateY(-32%) scale(1.1, 0.6);
+            transform: translateY(-32%) scale(1.1, 0.6);
+  }
+  60% {
+    -webkit-transform: translateY(-25%) scale(1, 1);
+            transform: translateY(-25%) scale(1, 1);
+  }
+}
+@keyframes jumping-in-up {
+  from, 90%, to {
+    -webkit-transform: translateY(0px) scale(1, 1);
+            transform: translateY(0px) scale(1, 1);
+  }
+  40% {
+    -webkit-transform: translateY(-25%) scale(1, 1);
+            transform: translateY(-25%) scale(1, 1);
+  }
+  55% {
+    -webkit-transform: translateY(-32%) scale(1.1, 0.6);
+            transform: translateY(-32%) scale(1.1, 0.6);
+  }
+  60% {
+    -webkit-transform: translateY(-25%) scale(1, 1);
+            transform: translateY(-25%) scale(1, 1);
+  }
+}
+.jump-in {
+  -webkit-animation-name: jump-in;
+          animation-name: jump-in;
+  -webkit-animation-timing-function: cubic-bezier(0.39, 0.53, 0.65, 0.51);
+          animation-timing-function: cubic-bezier(0.39, 0.53, 0.65, 0.51);
+}
+@-webkit-keyframes jump-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(25px) scale(1, 1);
+            transform: translateY(25px) scale(1, 1);
+  }
+  40% {
+    opacity: 1;
+    -webkit-transform: translateY(-32%) scale(1, 1);
+            transform: translateY(-32%) scale(1, 1);
+  }
+  60% {
+    -webkit-transform: translateY(-32%) scale(1.16, 0.65);
+            transform: translateY(-32%) scale(1.16, 0.65);
+  }
+  80% {
+    -webkit-transform: translateY(-25%) scale(1, 1);
+            transform: translateY(-25%) scale(1, 1);
+  }
+  to {
+    -webkit-transform: translateY(0%) scale(1, 1);
+            transform: translateY(0%) scale(1, 1);
+  }
+}
+@keyframes jump-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(25px) scale(1, 1);
+            transform: translateY(25px) scale(1, 1);
+  }
+  40% {
+    opacity: 1;
+    -webkit-transform: translateY(-32%) scale(1, 1);
+            transform: translateY(-32%) scale(1, 1);
+  }
+  60% {
+    -webkit-transform: translateY(-32%) scale(1.16, 0.65);
+            transform: translateY(-32%) scale(1.16, 0.65);
+  }
+  80% {
+    -webkit-transform: translateY(-25%) scale(1, 1);
+            transform: translateY(-25%) scale(1, 1);
+  }
+  to {
+    -webkit-transform: translateY(0%) scale(1, 1);
+            transform: translateY(0%) scale(1, 1);
+  }
+}
+.jump-out {
+  -webkit-animation-name: jump-out;
+          animation-name: jump-out;
+  -webkit-animation-timing-function: cubic-bezier(0.39, 0.53, 0.65, 0.51);
+          animation-timing-function: cubic-bezier(0.39, 0.53, 0.65, 0.51);
+}
+@-webkit-keyframes jump-out {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(25px) scale(1, 1);
+            transform: translateY(25px) scale(1, 1);
+  }
+  40% {
+    -webkit-transform: translateY(-32%) scale(1, 1);
+            transform: translateY(-32%) scale(1, 1);
+  }
+  60% {
+    -webkit-transform: translateY(-32%) scale(1.16, 0.65);
+            transform: translateY(-32%) scale(1.16, 0.65);
+  }
+  80% {
+    opacity: 1;
+    -webkit-transform: translateY(-25%) scale(1, 1);
+            transform: translateY(-25%) scale(1, 1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(0%) scale(1, 1);
+            transform: translateY(0%) scale(1, 1);
+  }
+}
+@keyframes jump-out {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(25px) scale(1, 1);
+            transform: translateY(25px) scale(1, 1);
+  }
+  40% {
+    -webkit-transform: translateY(-32%) scale(1, 1);
+            transform: translateY(-32%) scale(1, 1);
+  }
+  60% {
+    -webkit-transform: translateY(-32%) scale(1.16, 0.65);
+            transform: translateY(-32%) scale(1.16, 0.65);
+  }
+  80% {
+    opacity: 1;
+    -webkit-transform: translateY(-25%) scale(1, 1);
+            transform: translateY(-25%) scale(1, 1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(0%) scale(1, 1);
+            transform: translateY(0%) scale(1, 1);
   }
 }
 .grow {
