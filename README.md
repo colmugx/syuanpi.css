@@ -1,4 +1,4 @@
-# Syuanpi.css [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/) 
+# Syuanpi.css [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/ColMugX/Syuanpi.css)  
 （暂时没有英文版本…）
 
 `Syuanpi.css`是一个比较轻便简单的CSS3动画库，据说好像应该可以跨平台。~~（欢迎到DEMO页面尽情找彩蛋！）~~
