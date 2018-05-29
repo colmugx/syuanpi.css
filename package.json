@@ -1,21 +1,22 @@
 {
   "name": "syuanpi.css",
-  "version": "0.4.0",
+  "version": "0.10.0",
   "description": "A library of CSS animations.",
-  "main": "none",
+  "main": "dist/syuanpi.min.css",
   "scripts": {},
   "keywords": [
     "CSS",
     "animation"
   ],
-  "author": "Co1MugX",
+  "author": "colmugx",
   "license": "MIT",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
+  "dependencies": {
+    "autoprefixer": "^8.5.1",
+    "cssnano": "^3.10.0",
+    "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-rename": "^1.2.2",
-    "gulp-stylus": "^2.6.0"
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.3",
+    "gulp-stylus": "^2.7.0"
   }
 }

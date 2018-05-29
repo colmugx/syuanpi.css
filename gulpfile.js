@@ -1,38 +1,65 @@
-var gulp = require('gulp'),
-    stylus = require('gulp-stylus'),
-    concat = require('gulp-concat'),
-    minicss = require('gulp-minify-css'),
-    rename = require('gulp-rename'),
-    autoprefixer = require('gulp-autoprefixer')
+var gulp  = require('gulp'),
+  stylus  = require('gulp-stylus'),
+  concat  = require('gulp-concat'),
+  rename  = require('gulp-rename'),
+  postcss = require('gulp-postcss')
 
-gulp.task('build', function () {
-    gulp.src('src/base.styl')
-        .pipe(concat('syuanpi.styl'))
-        .pipe(stylus())
-        .pipe(autoprefixer({
-            browsers: ['last 2 version','iOS >= 7','Android >= 4.0'],
-            cascade: true
-        }))
-        .pipe(gulp.dest('dist/'))
-})
+var path = require('path')
+var autoprefixer = require('autoprefixer')
+var cssnano = require('cssnano')
+var source = {
+  src: path.join('src', '_base.styl'),
+  dist: path.join('dist')
+}
 
-gulp.task('build:w', ['build'], function() {
-    gulp.watch(['src/*.styl', 'src/animation/*/**.styl'], ['build'])
-});
+function build(cb) {
+  return gulp
+    .src(source.src)
+    .pipe(stylus())
+    .pipe(postcss([
+      autoprefixer({
+        browsers: [
+          "last 2 version",
+          "iOS >= 8",
+          "Android >= 5.0"
+        ],
+        cascade: true
+      })
+    ]))
+    .pipe(rename({
+      basename: 'syuanpi',
+      extname: '.css'
+    }))
+    .pipe(gulp.dest(source.dist))
+}
 
-gulp.task('minicss', function () {
-    gulp.src('src/base.styl')
-        .pipe(concat('syuanpi.styl'))
-        .pipe(stylus())
-        .pipe(autoprefixer({
-            browsers: ['last 2 version','iOS >= 7','Android >= 4.0'],
-            cascade: true
-        }))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(minicss())
-        .pipe(gulp.dest('dist/'))
-})
+function minicss(cb) {
+  return gulp
+    .src(path.join(source.dist, 'syuanpi.css'))
+    .pipe(postcss([cssnano()]))
+    .pipe(rename({
+      basename: 'syuanpi',
+      suffix: '.min',
+      extname: '.css'
+    }))
+    .pipe(gulp.dest(source.dist))
+}
 
-gulp.task('default', function() {
-    gulp.start('build', 'minicss')
-})
+function watch(cb) {
+  gulp
+    .watch(['src/*/**.styl'])
+    .on('change', file => build(cb))
+  cb()
+}
+
+gulp.task('dev', gulp.series(
+  build,
+  gulp.parallel(
+    watch
+  )
+))
+
+gulp.task('build', gulp.series(
+  build,
+  minicss
+))
