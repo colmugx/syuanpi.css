@@ -8,7 +8,7 @@ var path = require('path')
 var autoprefixer = require('autoprefixer')
 var cssnano = require('cssnano')
 var source = {
-  src: path.join('src', '_base.styl'),
+  src: path.join('src', 'syuanpi.styl'),
   dist: path.join('dist')
 }
 
@@ -21,7 +21,8 @@ function build(cb) {
         browsers: [
           "last 2 version",
           "iOS >= 8",
-          "Android >= 5.0"
+          "Android >= 5.0",
+          "Firefox ESR"
         ],
         cascade: true
       })
@@ -47,7 +48,7 @@ function minicss(cb) {
 
 function watch(cb) {
   gulp
-    .watch(['src/*/**.styl'])
+    .watch(['src/**/*'])
     .on('change', file => build(cb))
   cb()
 }
