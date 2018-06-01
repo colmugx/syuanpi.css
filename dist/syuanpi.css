@@ -37,120 +37,6 @@
   -webkit-animation-delay: 750ms;
           animation-delay: 750ms;
 }
-.pulse {
-  -webkit-animation-name: pulse;
-          animation-name: pulse;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-}
-@-webkit-keyframes pulse {
-  from, to {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-  50% {
-    -webkit-transform: scale(1.14, 1.14);
-            transform: scale(1.14, 1.14);
-  }
-}
-@keyframes pulse {
-  from, to {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-  50% {
-    -webkit-transform: scale(1.14, 1.14);
-            transform: scale(1.14, 1.14);
-  }
-}
-.blink {
-  -webkit-animation-name: blinkin;
-          animation-name: blinkin;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-}
-@-webkit-keyframes blinkin {
-  from, to {
-    opacity: 1;
-  }
-  30%, 60% {
-    opacity: 0;
-  }
-}
-@keyframes blinkin {
-  from, to {
-    opacity: 1;
-  }
-  30%, 60% {
-    opacity: 0;
-  }
-}
-.bloom {
-  -webkit-animation-name: bloom;
-          animation-name: bloom;
-}
-@-webkit-keyframes bloom {
-  from {
-    opacity: 0;
-    -webkit-transform: scale(0.8, 0.8);
-            transform: scale(0.8, 0.8);
-  }
-  75% {
-    -webkit-transform: scale(1.1, 1.1);
-            transform: scale(1.1, 1.1);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-}
-@keyframes bloom {
-  from {
-    opacity: 0;
-    -webkit-transform: scale(0.8, 0.8);
-            transform: scale(0.8, 0.8);
-  }
-  75% {
-    -webkit-transform: scale(1.1, 1.1);
-            transform: scale(1.1, 1.1);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-}
-.dead {
-  -webkit-animation-name: dead;
-          animation-name: dead;
-  -webkit-animation-timing-function: cubic-bezier(0.93, 0, 0.32, 1.17);
-          animation-timing-function: cubic-bezier(0.93, 0, 0.32, 1.17);
-}
-@-webkit-keyframes dead {
-  from {
-    opacity: 1;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-  to {
-    opacity: 0;
-    -webkit-transform: scale(1.2, 1.2);
-            transform: scale(1.2, 1.2);
-  }
-}
-@keyframes dead {
-  from {
-    opacity: 1;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-  to {
-    opacity: 0;
-    -webkit-transform: scale(1.2, 1.2);
-            transform: scale(1.2, 1.2);
-  }
-}
 .fadeIn {
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
@@ -481,6 +367,240 @@
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0);
             transform: translate3d(100%, 0, 0);
+  }
+}
+.shuttleIn {
+  -webkit-animation-name: shuttleIn;
+          animation-name: shuttleIn;
+  -webkit-animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+          animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+}
+@-webkit-keyframes shuttleIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes shuttleIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.shuttleOut {
+  -webkit-animation-name: shuttleOut;
+          animation-name: shuttleOut;
+  -webkit-animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+          animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+}
+@-webkit-keyframes shuttleOut {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+@keyframes shuttleOut {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+          animation-name: zoomIn;
+  -webkit-animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+          animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+}
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.zoomOut {
+  -webkit-animation-name: zoomOut;
+          animation-name: zoomOut;
+  -webkit-animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+          animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+}
+@-webkit-keyframes zoomOut {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+  }
+}
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+  }
+}
+.pulse {
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+@-webkit-keyframes pulse {
+  from, to {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.14, 1.14);
+            transform: scale(1.14, 1.14);
+  }
+}
+@keyframes pulse {
+  from, to {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.14, 1.14);
+            transform: scale(1.14, 1.14);
+  }
+}
+.blink {
+  -webkit-animation-name: blinkin;
+          animation-name: blinkin;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+@-webkit-keyframes blinkin {
+  from, to {
+    opacity: 1;
+  }
+  30%, 60% {
+    opacity: 0;
+  }
+}
+@keyframes blinkin {
+  from, to {
+    opacity: 1;
+  }
+  30%, 60% {
+    opacity: 0;
+  }
+}
+.bloom {
+  -webkit-animation-name: bloom;
+          animation-name: bloom;
+}
+@-webkit-keyframes bloom {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.8, 0.8);
+            transform: scale(0.8, 0.8);
+  }
+  75% {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+@keyframes bloom {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.8, 0.8);
+            transform: scale(0.8, 0.8);
+  }
+  75% {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+.dead {
+  -webkit-animation-name: dead;
+          animation-name: dead;
+  -webkit-animation-timing-function: cubic-bezier(0.93, 0, 0.32, 1.17);
+          animation-timing-function: cubic-bezier(0.93, 0, 0.32, 1.17);
+}
+@-webkit-keyframes dead {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+  }
+}
+@keyframes dead {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
   }
 }
 .float {
@@ -1196,6 +1316,8 @@
 .tvIn {
   -webkit-animation-name: tvIn;
           animation-name: tvIn;
+  -webkit-animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+          animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
 }
 @-webkit-keyframes tvIn {
   from {
@@ -1228,6 +1350,8 @@
 .tvOut {
   -webkit-animation-name: tvOut;
           animation-name: tvOut;
+  -webkit-animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+          animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
 }
 @-webkit-keyframes tvOut {
   from {
