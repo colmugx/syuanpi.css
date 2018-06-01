@@ -593,6 +593,48 @@
             transform: rotateY(360deg);
   }
 }
+.melt {
+  -webkit-animation-name: melt;
+          animation-name: melt;
+  -webkit-animation-timing-function: cubic-bezier(0.61, 0, 1, 0.73);
+          animation-timing-function: cubic-bezier(0.61, 0, 1, 0.73);
+}
+@-webkit-keyframes melt {
+  from {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+  90% {
+    opacity: 0.1;
+    -webkit-filter: blur(36px);
+            filter: blur(36px);
+    -webkit-animation-timing-function: cubic-bezier(0.15, 0.6, 0.75, 1);
+            animation-timing-function: cubic-bezier(0.15, 0.6, 0.75, 1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+            transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@keyframes melt {
+  from {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+  90% {
+    opacity: 0.1;
+    -webkit-filter: blur(36px);
+            filter: blur(36px);
+    -webkit-animation-timing-function: cubic-bezier(0.15, 0.6, 0.75, 1);
+            animation-timing-function: cubic-bezier(0.15, 0.6, 0.75, 1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+            transform: scale3d(1.1, 1.1, 1);
+  }
+}
 .tvIn {
   -webkit-animation-name: tvIn;
           animation-name: tvIn;
@@ -733,6 +775,46 @@
   }
   30%, 60% {
     opacity: 0;
+  }
+}
+.sway {
+  -webkit-animation-name: sway;
+          animation-name: sway;
+}
+@-webkit-keyframes sway {
+  from, 50%, to {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  25% {
+    -webkit-transform-origin: 30% 50%;
+            transform-origin: 30% 50%;
+    -webkit-transform: rotateZ(-35deg);
+            transform: rotateZ(-35deg);
+  }
+  75% {
+    -webkit-transform-origin: 70% 50%;
+            transform-origin: 70% 50%;
+    -webkit-transform: rotateZ(35deg);
+            transform: rotateZ(35deg);
+  }
+}
+@keyframes sway {
+  from, 50%, to {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  25% {
+    -webkit-transform-origin: 30% 50%;
+            transform-origin: 30% 50%;
+    -webkit-transform: rotateZ(-35deg);
+            transform: rotateZ(-35deg);
+  }
+  75% {
+    -webkit-transform-origin: 70% 50%;
+            transform-origin: 70% 50%;
+    -webkit-transform: rotateZ(35deg);
+            transform: rotateZ(35deg);
   }
 }
 .bloom {
