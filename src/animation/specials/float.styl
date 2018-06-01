@@ -1,0 +1,23 @@
+@keyframes float
+  from
+    transform: translateY(0%)
+  33%
+    opacity: 1
+    transform: translateY(-10%)
+  67%
+    transform: translateY(12%)
+  90%, to
+    opacity: 1
+    transform: translate(0%)
+
+@keyframes float-in
+  from,to
+    transform: translateY(8%)
+  50%
+    opacity: 1
+    transform: translateY(-8%)
+
+.float
+  animation-name: float
+.float-in
+  animation-name: float-in
