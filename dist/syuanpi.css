@@ -492,8 +492,8 @@
 .rotateLeft {
   -webkit-animation-name: rotate2dLeft;
           animation-name: rotate2dLeft;
-  -webkit-animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
-          animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+  -webkit-animation-timing-function: cubic-bezier(0.3, 0.6, 0.9, 0.35);
+          animation-timing-function: cubic-bezier(0.3, 0.6, 0.9, 0.35);
 }
 @-webkit-keyframes rotate2dLeft {
   from {
@@ -518,8 +518,8 @@
 .rotateRight {
   -webkit-animation-name: rotate2dRight;
           animation-name: rotate2dRight;
-  -webkit-animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
-          animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+  -webkit-animation-timing-function: cubic-bezier(0.3, 0.6, 0.9, 0.35);
+          animation-timing-function: cubic-bezier(0.3, 0.6, 0.9, 0.35);
 }
 @-webkit-keyframes rotate2dRight {
   from {
@@ -633,6 +633,40 @@
     opacity: 0;
     -webkit-transform: scale3d(1.1, 1.1, 1);
             transform: scale3d(1.1, 1.1, 1);
+  }
+}
+.clarity {
+  -webkit-animation-name: clarity;
+          animation-name: clarity;
+  -webkit-animation-timing-function: cubic-bezier(0.2, 0.1, 0.1, 1);
+          animation-timing-function: cubic-bezier(0.2, 0.1, 0.1, 1);
+}
+@-webkit-keyframes clarity {
+  from {
+    opacity: 0;
+    -webkit-filter: blur(36px);
+            filter: blur(36px);
+    -webkit-animation-timing-function: cubic-bezier(0.15, 0.6, 0.75, 1);
+            animation-timing-function: cubic-bezier(0.15, 0.6, 0.75, 1);
+  }
+  to {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+@keyframes clarity {
+  from {
+    opacity: 0;
+    -webkit-filter: blur(36px);
+            filter: blur(36px);
+    -webkit-animation-timing-function: cubic-bezier(0.15, 0.6, 0.75, 1);
+            animation-timing-function: cubic-bezier(0.15, 0.6, 0.75, 1);
+  }
+  to {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
   }
 }
 .tvIn {
