@@ -8,6 +8,20 @@
     opacity 0
     transform translate3d(0, 100%, 0)
 
+@keyframes fadeOutDown
+  from
+    opacity 1
+    transform translate3d(0, 0, 0)
+  30%
+    opacity 0
+  to
+    opacity 0
+    transform translate3d(0, 50px, 0)
+
 .fadeOutDown
   animation-name: fadeOutDown
+  animation-timing-function: $exitsbz
+
+.fadeOutDownShort
+  animation-name: fadeOutDownShort
   animation-timing-function: $exitsbz
