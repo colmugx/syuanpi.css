@@ -1,0 +1,12 @@
+@keyframes flash
+  from
+    opacity: 0
+    animation-timing-function: ease-out
+  35%
+    opacity: 1
+    animation-timing-function: cubic-bezier(.73,.07,.6,.6)
+  to
+    opacity 0
+
+.flash
+  animation-name: flash
