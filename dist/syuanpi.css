@@ -1139,6 +1139,40 @@
             transform: rotateZ(35deg);
   }
 }
+.flash {
+  -webkit-animation-name: flash;
+          animation-name: flash;
+}
+@-webkit-keyframes flash {
+  from {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  35% {
+    opacity: 1;
+    -webkit-animation-timing-function: cubic-bezier(0.73, 0.07, 0.6, 0.6);
+            animation-timing-function: cubic-bezier(0.73, 0.07, 0.6, 0.6);
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes flash {
+  from {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  35% {
+    opacity: 1;
+    -webkit-animation-timing-function: cubic-bezier(0.73, 0.07, 0.6, 0.6);
+            animation-timing-function: cubic-bezier(0.73, 0.07, 0.6, 0.6);
+  }
+  to {
+    opacity: 0;
+  }
+}
 .float {
   -webkit-animation-name: float;
           animation-name: float;
@@ -1310,6 +1344,8 @@
 .jumping {
   -webkit-animation-name: jumping;
           animation-name: jumping;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
   -webkit-animation-timing-function: cubic-bezier(0.24, 0.4, 0.73, 0.55);
           animation-timing-function: cubic-bezier(0.24, 0.4, 0.73, 0.55);
 }
@@ -1327,16 +1363,18 @@
 }
 @-webkit-keyframes jumping {
   from, to {
+    opacity: 1;
     -webkit-transform: translateY(0px) scale(1, 1);
             transform: translateY(0px) scale(1, 1);
   }
   30%, 50% {
+    opacity: 0;
     -webkit-transform: translateY(-25%) scale(1, 1);
             transform: translateY(-25%) scale(1, 1);
   }
   40% {
-    -webkit-transform: translateY(-22%) scale(1.1, 0.7);
-            transform: translateY(-22%) scale(1.1, 0.7);
+    -webkit-transform: translateY(-22%) scale(1, 1);
+            transform: translateY(-22%) scale(1, 1);
   }
   70%, 90% {
     -webkit-transform: translateY(25%) scale(1, 1);
@@ -1349,16 +1387,18 @@
 }
 @keyframes jumping {
   from, to {
+    opacity: 1;
     -webkit-transform: translateY(0px) scale(1, 1);
             transform: translateY(0px) scale(1, 1);
   }
   30%, 50% {
+    opacity: 0;
     -webkit-transform: translateY(-25%) scale(1, 1);
             transform: translateY(-25%) scale(1, 1);
   }
   40% {
-    -webkit-transform: translateY(-22%) scale(1.1, 0.7);
-            transform: translateY(-22%) scale(1.1, 0.7);
+    -webkit-transform: translateY(-22%) scale(1, 1);
+            transform: translateY(-22%) scale(1, 1);
   }
   70%, 90% {
     -webkit-transform: translateY(25%) scale(1, 1);
