@@ -1,0 +1,14 @@
+@keyframes melt
+  from
+    filter blur(0)
+  90%
+    opacity 0.1
+    filter: blur(36px)
+    animation-timing-function cubic-bezier(.15, .6, .75, 1)
+  to
+    opacity 0
+    transform scale3d(1.1, 1.1, 1)
+
+.melt
+  animation-name melt
+  animation-timing-function cubic-bezier(.61, 0, 1, .73)

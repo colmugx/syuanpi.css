@@ -1,0 +1,12 @@
+@keyframes clarity
+  from
+    opacity 0
+    filter blur(36px)
+    animation-timing-function cubic-bezier(.15, .6, .75, 1)
+  to
+    opacity 1
+    filter: blur(0)
+
+.clarity
+  animation-name clarity
+  animation-timing-function $enterbz

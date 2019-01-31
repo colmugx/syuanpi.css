@@ -1,38 +1,38 @@
 @keyframes carInLeft
-    from
-        transform: translateX(-1000px) rotateZ(12deg)
-        transform-origin: 0% 100% 90%
-    50%
-        transform: translateX(0) rotateZ(8deg)
-        animation-timing-function: cubic-bezier(0, 1.13, 0.73, 1.07)
-    55%
-        transform: rotateZ(12deg)
-        transform-origin: 0% 100% 90%
-        animation-timing-function: cubic-bezier(0, 1.2, 0.61, 0.97)
-    76%,to
-        transform: none
+  from
+    transform: translateX(-1000px) rotateZ(12deg)
+    transform-origin: 0% 100% 90%
+  50%
+    transform: translateX(0) rotateZ(8deg)
+    animation-timing-function: cubic-bezier(0, 1.13, 0.73, 1.07)
+  55%
+    transform: rotateZ(12deg)
+    transform-origin: 0% 100% 90%
+    animation-timing-function: cubic-bezier(0, 1.2, 0.61, 0.97)
+  76%,to
+    transform: none
 
 @keyframes carInRight
-    from
-        transform: translateX(1000px) rotateZ(-12deg)
-        transform-origin: 0% 100% 90%
-    50%
-        transform: translateX(0) rotateZ(-8deg)
-        animation-timing-function: cubic-bezier(0, 1.13, 0.73, 1.07)
-    55%
-        transform: rotateZ(-12deg)
-        transform-origin: 0% 100% 90%
-        animation-timing-function: cubic-bezier(0, 1.2, 0.61, 0.97)
-    76%,to
-        transform: none
+  from
+    transform: translateX(1000px) rotateZ(-12deg)
+    transform-origin: 0% 100% 90%
+  50%
+    transform: translateX(0) rotateZ(-8deg)
+    animation-timing-function: cubic-bezier(0, 1.13, 0.73, 1.07)
+  55%
+    transform: rotateZ(-12deg)
+    transform-origin: 0% 100% 90%
+    animation-timing-function: cubic-bezier(0, 1.2, 0.61, 0.97)
+  76%,to
+    transform: none
 
 .carInLeft
 .carInRight
-    animation-timing-function: ease
-    animation-duration: 1s
+  animation-timing-function: ease
+  animation-duration: 1s
 
 .carInLeft
-    animation-name: carInLeft
+  animation-name: carInLeft
 
 .carInRight
-    animation-name: carInRight
+  animation-name: carInRight

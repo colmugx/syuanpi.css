@@ -1,0 +1,27 @@
+@keyframes fadeInRight
+    from
+      opacity 0
+      transform translate3d(100%, 0, 0)
+    30%
+      opacity 0
+    to
+      opacity 1
+      transform translate3d(0)
+
+@keyframes fadeInRightShort
+    from
+      opacity 0
+      transform translate3d(50px, 0, 0)
+    30%
+      opacity 0
+    to
+      opacity 1
+      transform translate3d(0)
+
+.fadeInRight
+  animation-name: fadeInRight
+  animation-timing-function: $enterbz
+
+.fadeInRightShort
+  animation-name: fadeInRightShort
+  animation-timing-function: $enterbz

@@ -4,3 +4,4 @@ test/
 /node_modules/
 .vscode
 /src/func.styl
+package-lock.json

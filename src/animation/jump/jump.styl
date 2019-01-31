@@ -1,43 +1,46 @@
 @keyframes jumping
-    from, to
-        transform: translateY(0px) scale(1,1)
-    30%, 50%
-        transform: translateY(-25%) scale(1,1)
-    40%
-        transform: translateY(-22%) scale(1.1,0.7)
-    70%, 90%
-        transform: translateY(25%) scale(1,1)
-    80%
-        transform: translateY(22%) scale(1.1,0.7)
+  from, to
+    opacity: 1
+    transform: translateY(0px) scale(1,1)
+  30%, 50%
+    opacity: 0
+    transform: translateY(-25%) scale(1,1)
+  40%
+    transform: translateY(-22%) scale(1,1)
+  70%, 90%
+    transform: translateY(25%) scale(1,1)
+  80%
+    transform: translateY(22%) scale(1.1,0.7)
 
 @keyframes jumping-in-down
-    from,90%, to
-        transform: translateY(0px) scale(1,1)
-    40%
-        transform: translateY(25%) scale(1,1)
-    55%
-        transform: translateY(32%) scale(1.1,0.6)
-    60%
-        transform: translateY(25%) scale(1,1)
+  from,90%, to
+    transform: translateY(0px) scale(1,1)
+  40%
+    transform: translateY(25%) scale(1,1)
+  55%
+    transform: translateY(32%) scale(1.1,0.6)
+  60%
+    transform: translateY(25%) scale(1,1)
 
 @keyframes jumping-in-up
-    from,90%, to
-        transform: translateY(0px) scale(1,1)
-    40%
-        transform: translateY(-25%) scale(1,1)
-    55%
-        transform: translateY(-32%) scale(1.1,0.6)
-    60%
-        transform: translateY(-25%) scale(1,1)
+  from,90%, to
+    transform: translateY(0px) scale(1,1)
+  40%
+    transform: translateY(-25%) scale(1,1)
+  55%
+    transform: translateY(-32%) scale(1.1,0.6)
+  60%
+    transform: translateY(-25%) scale(1,1)
 
 .jumping
-    animation-name: jumping
-    animation-timing-function: cubic-bezier(0.24, 0.4, 0.73, 0.55)
+  animation-name: jumping
+  animation-duration: 1500ms
+  animation-timing-function: cubic-bezier(0.24, 0.4, 0.73, 0.55)
 
 .jumping-in-down
-    animation-name: jumping-in-down
-    animation-timing-function: cubic-bezier(0.39, 0.53, 0.65, 0.51)
+  animation-name: jumping-in-down
+  animation-timing-function: cubic-bezier(0.39, 0.53, 0.65, 0.51)
 
 .jumping-in-up
-    animation-name: jumping-in-up
-    animation-timing-function: cubic-bezier(0.39, 0.53, 0.65, 0.51)
+  animation-name: jumping-in-up
+  animation-timing-function: cubic-bezier(0.39, 0.53, 0.65, 0.51)

@@ -1,0 +1,21 @@
+@import '_fn'
+
+$time = 375ms
+$back = 100ms
+$long = $time * 2
+
+$enterbz  = cubic-bezier(.2, .1, .1,  1 )
+$exitsbz  = cubic-bezier(.8,  0,  1, .7 )
+$movebz   = cubic-bezier(.8,  0, .2,  1 )
+$rotatebz = cubic-bezier(.3, .6, .9, .35)
+
+.syuanpi
+  animation-duration: $time
+  animation-fill-mode: both
+  &.infinite
+    animation-iteration-count: infinite
+  &.long
+    animation-duration: $long
+  &.forwards
+    animation-fill-mode: forwards
+  createBackward($back, 1 2 3 4 5)
