@@ -1,0 +1,219 @@
+animate()
+  transition: all 375ms cubic-bezier(.8,  0, .2,  1 )
+
+$color = {
+  main: #383838,
+  sub: #666,
+  desc: #999,
+  line: #e8e8e8,
+  highlight: #262626
+}
+$header = {
+  h1: 30px
+  h2: 28px
+  h3: 24px
+  h4: 20px
+  h5: 16px
+  h6: 14px
+}
+$count = 2
+
+for $k, $v in $header
+  {$k}
+    font-size $v
+
+html,
+body
+  padding: 0
+  margin: 0
+  overflow: hidden
+  *
+    box-sizing: border-box
+
+.disabled
+  color: $color.desc
+  cursor: no-drop
+
+.main
+  max-width: 1200px
+  width: 100%
+  color: $color.main
+  font-family: 'PingFang SC', 'Microsoft YaHei', STHeiti, Helvetica, 'Helvetica Neue'
+  font-weight: 400
+  font-size: 16px
+
+header
+  *
+    animate()
+  .title
+    text-align: center
+    margin: 48px 0
+    color: $color.highlight
+    transform: translateY(0)
+    cursor: default
+    user-select none
+    .text
+      margin: 48px 0
+      font-size: 72px
+      font-weight: 100
+      text-shadow: 3px 5px 2px #e8e8e8
+    &.nostyle
+      margin: 0
+      height: 100%
+      color: $color.desc
+      text-align: center
+      transform: translateY(50%)
+      .text
+        text-shadow: none
+  .nav
+    display: flex
+    margin: 0 24px
+    align-items: center
+    justify-content: space-between
+    border-bottom: 1px solid $color.line
+    padding: 16px 0
+    transform: translateY(0)
+    &.nostyle
+      opacity: 0
+      transform: translateY(-50px)
+    .title
+      margin: 0
+      padding: 0
+      margin-left: 24px
+      font-size: $header.h2
+      font-weight: 400
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+      line-height: 1.5
+      li
+        display: inline-block
+        padding: 0
+        margin-right: 24px
+        a
+          text-decoration: none
+          color: $color.highlight
+
+.main
+  position: relative
+  max-width: 1200px
+  margin: 40px auto
+  transition-delay: 100ms
+  animate()
+  &.nostyle
+    display: none
+    margin: 0
+    padding: 0
+    height: 0
+
+.container
+  .a-frame
+    .a-frame-title
+      position: relative
+      h2
+        padding: 8px 0
+      &:after
+        content: ''
+        position absolute
+        bottom: 0
+        left: 0
+        height: 2px
+        width: 24px
+        background-color: $color.sub
+    .a-frame-body
+      display: flex
+      flex-flow: row wrap
+      justify-content: space-between
+      overflow: hidden
+      for $i in 0 1 2 3 4 5
+        .a-item:nth-child({$i+1})
+          animation-delay: 100ms * $i
+  .a-item
+    position relative
+    display: flex
+    justify-content: center
+    flex-basis: (100% / 2 - 1)
+    margin: 16px 0
+    padding: 16px
+    cursor: pointer
+    height: 54px
+    animate()
+    .a-item-wrapper
+      text-align: center
+      max-width: 200px
+      &:before
+      &:after
+        content: ''
+        position: absolute
+        width: 16px
+        height: 16px
+        border: 1px solid
+        border-color: $color.highlight
+        animate()
+      &:before
+        border-width: 1px 0 0 1px
+        top: 0
+        left: 40%
+      &:after
+        border-width: 0 1px 1px 0
+        bottom: 0
+        right: 40%
+      .a-item-body
+        display: none
+        margin: 24px 0
+        text-align: center
+      .a-item-code
+        display: none
+        background-color: #f3f3f3
+        color: $color.sub
+        border-top: 2px solid $color.desc
+        margin: 0 16px
+        padding: 8px
+        cursor auto
+    &.a-item-active
+      height: 200px
+      .a-item-wrapper
+        min-width: 100%
+        &:before
+          left: 0
+        &:after
+          right: 0
+        .a-item-body
+        .a-item-code
+          display: block
+        .a-item-title
+          font-weight: 600
+
+.block
+  width: 100px
+  height: 50px
+  background-color: $color.desc
+  margin: 0 auto
+
+.subtitle
+  position: fixed
+  bottom: 80px
+  left: 47.5%
+  font-size: 16px
+  color: $color.desc
+  opacity: 0
+
+.s-button
+  outline: 0
+  background: transparent
+  color: $color.main
+  padding: 4px 16px
+  border-radius: 12px
+  border: 1px solid
+  border-color: $color.highlight
+  font-size: 18px
+  border-left-color: transparent
+  border-right-color: transparent
+  transform: scale(1)
+  transition: transform 100ms ease-out
+  cursor: pointer
+  &:hover
+    transform: scale(1.04)
+  &:active
+    transform: translateY(1px) scale(0.98)

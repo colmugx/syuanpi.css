@@ -10,13 +10,15 @@
   ],
   "author": "colmugx",
   "license": "MIT",
-  "dependencies": {
-    "autoprefixer": "^8.5.1",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^8.6.5",
     "cssnano": "^3.10.0",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-postcss": "^7.0.1",
-    "gulp-rename": "^1.2.3",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
     "gulp-stylus": "^2.7.0"
   }
 }
