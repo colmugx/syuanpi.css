@@ -1,0 +1,15 @@
+mixin item(name)
+  .a-item.syuanpi.fadeIn
+    .a-item-wrapper
+      .a-item-title= name
+      .a-item-body.syuanpi.back-3(class=name)
+        .block
+      .a-item-code.syuanpi.back-5.fadeInUp
+        code= `<div class="syuanpi ${name}"></div>`
+
+mixin frame(name)
+  .a-frame
+    .a-frame-title
+      h2= name
+    .a-frame-body
+      block
